@@ -11,33 +11,35 @@ var questions = [
     "Nodes inside of a parent node are known as ____."
 ];
 
-firstAnswers = [
-    '<js>',
-    '<script>',
-    '<java>',
-    '<jquery>'
-];
+var answerCollection = {
+    firstAnswers: [
+        '<js>',
+        '<script>',
+        '<java>',
+        '<jquery>'
+    ],
 
-secondAnswers = [
-    'React',
-    'jQuery',
-    'DOM',
-    'JSON'
-];
+    secondAnswers: [
+        'React',
+        'jQuery',
+        'DOM',
+        'JSON'
+    ],
 
-thirdAnswers = [
-    'Window',
-    'Document',
-    'Body',
-    'Main'
-];
+    thirdAnswers: [
+        'Window',
+        'Document',
+        'Body',
+        'Main'
+    ],
 
-fourthAnswers = [
-    'Sons',
-    'Grandchildren',
-    'Elements',
-    'Children'
-];
+    fourthAnswers: [
+        'Sons',
+        'Grandchildren',
+        'Elements',
+        'Children'
+    ]
+};
 
 var funcCollection = {
     play: playTime(),
@@ -63,31 +65,31 @@ function playTime() {
 
 function displayFirstQuestions () {
     question.textContent = questions[0];
-    for (var i = 0; i < firstAnswers.length; i++) {
-        answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
+    for (var i = 0; i < answerCollection.firstAnswers.length; i++) {
+        answerList.children[i].children[0].textContent = i + ". " + answerCollection.firstAnswers[i];
     }
 }
 
-function displaySecondQuestions () {
-    question.textContent = questions[1];
-    for (var i = 0; i < secondAnswers.length; i++) {
-        answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
-    }
-}
+// function displaySecondQuestions () {
+//     question.textContent = questions[1];
+//     for (var i = 0; i < secondAnswers.length; i++) {
+//         answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
+//     }
+// }
 
-function displayThirdQuestions () {
-    question.textContent = questions[2];
-    for (var i = 0; i < secondAnswers.length; i++) {
-        answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
-    }
-}
+// function displayThirdQuestions () {
+//     question.textContent = questions[2];
+//     for (var i = 0; i < secondAnswers.length; i++) {
+//         answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
+//     }
+// }
 
-function displayFourthQuestions () {
-    question.textContent = questions[3];
-    for (var i = 0; i < secondAnswers.length; i++) {
-        answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
-    }
-}
+// function displayFourthQuestions () {
+//     question.textContent = questions[3];
+//     for (var i = 0; i < secondAnswers.length; i++) {
+//         answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
+//     }
+// }
 
 funcCollection.play();
 funcCollection.first();
