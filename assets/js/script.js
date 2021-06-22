@@ -66,7 +66,8 @@ function playTime() {
 function displayFirstQuestions () {
     question.textContent = questions[0];
     for (var i = 0; i < answerCollection.firstAnswers.length; i++) {
-        answerList.children[i].children[0].textContent = i + ". " + answerCollection.firstAnswers[i];
+        answerList.children[i].children[0].textContent = i + ". " + answerCollection[Object.keys(answerCollection)[0]][i];
+        console.log(answerCollection[Object.keys(answerCollection)[0]][1]);
     }
 }
 
