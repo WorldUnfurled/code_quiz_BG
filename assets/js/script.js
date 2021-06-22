@@ -1,5 +1,6 @@
 var time = document.querySelector('#time');
-var answerList = document.querySelector('#question-list');
+var question = document.querySelector('#question');
+var answerList = document.querySelector('#answer-list');
 
 var timeLeft = 60;
 
@@ -30,6 +31,15 @@ thirdAnswers = [
     'Main'
 ];
 
+var funcCollection = {
+    play: playTime(),
+    first: displayFirstQuestions(),
+    second: displaySecondQuestions(),
+    third: displayThirdQuestions(),
+    fourth: displayFourthQuestions(),
+    hs: displayHighscores()
+}
+
 function playTime() {
     // Sets interval in variable
     var timeInterval = setInterval(function() {
@@ -44,7 +54,7 @@ function playTime() {
 }
 
 function displayFirstQuestions () {
-
+    question.textContent = questions[0];
 
     for (var i = 0; i < firstAnswers.length; i++) {
         answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
@@ -53,5 +63,5 @@ function displayFirstQuestions () {
     }
 }
 
-playTime();
-displayFirstQuestions();
+funcCollection.play();
+funcCollection.first();
