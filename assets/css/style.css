@@ -4,6 +4,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border: 3px solid red;
+    padding: 20px;
+}
+
+header {
+    width: 500px;
+    padding-bottom: 15px;
 }
 
 ul {
