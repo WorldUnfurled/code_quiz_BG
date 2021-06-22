@@ -6,8 +6,9 @@ var timeLeft = 60;
 
 var questions = [
     "What tag is used to link a Javascript file to the HTML?",
-    "The programming interface that represents a webpage with text is known as ____", 
-    "Typing console.log(this) in the global scope displays ____ to the console"
+    "The programming interface that represents a webpage with text is known as ____.", 
+    "Typing console.log(this) in the global scope displays ____ to the console.",
+    "Nodes inside of a parent node are known as ____."
 ];
 
 firstAnswers = [
@@ -29,6 +30,13 @@ thirdAnswers = [
     'Document',
     'Body',
     'Main'
+];
+
+fourthAnswers = [
+    'Sons',
+    'Grandchildren',
+    'Elements',
+    'Children'
 ];
 
 var funcCollection = {
@@ -55,11 +63,29 @@ function playTime() {
 
 function displayFirstQuestions () {
     question.textContent = questions[0];
-
     for (var i = 0; i < firstAnswers.length; i++) {
         answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
-        // console.log(answerList.children.eq(i).firstChild.textContent);
-        console.log(answerList.children[i].children[0].textContent);
+    }
+}
+
+function displaySecondQuestions () {
+    question.textContent = questions[1];
+    for (var i = 0; i < secondAnswers.length; i++) {
+        answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
+    }
+}
+
+function displayThirdQuestions () {
+    question.textContent = questions[2];
+    for (var i = 0; i < secondAnswers.length; i++) {
+        answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
+    }
+}
+
+function displayFourthQuestions () {
+    question.textContent = questions[3];
+    for (var i = 0; i < secondAnswers.length; i++) {
+        answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
     }
 }
 
