@@ -5,3 +5,22 @@
     transform: translate(-50%, -50%);
     border: 3px solid red;
 }
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: left;
+}
+
+button {
+    background-color: #46008C;
+    border: none;
+    text-align: center;
+    color: white;
+    border-radius: 7px;
+    padding: .4em;
+}
