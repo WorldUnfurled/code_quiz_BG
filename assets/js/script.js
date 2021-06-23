@@ -41,15 +41,6 @@ var answerCollection = {
     ]
 };
 
-var funcCollection = {
-    play: playTime(),
-    first: displayFirstQuestions(),
-    second: displaySecondQuestions(),
-    third: displayThirdQuestions(),
-    fourth: displayFourthQuestions(),
-    hs: displayHighscores()
-}
-
 function playTime() {
     // Sets interval in variable
     var timeInterval = setInterval(function() {
@@ -63,34 +54,57 @@ function playTime() {
     }, 1000);
 }
 
-function displayFirstQuestions () {
-    question.textContent = questions[0];
-    for (var i = 0; i < answerCollection.firstAnswers.length; i++) {
-        answerList.children[i].children[0].textContent = i + ". " + answerCollection[Object.keys(answerCollection)[0]][i];
-        console.log(answerCollection[Object.keys(answerCollection)[0]][1]);
+var counter = 0;
+
+function displayFirstQuestions() {
+    console.log(counter);
+    if (counter === 0) {
+        question.textContent = questions[0];
+        for (var i = 0; i < answerCollection.firstAnswers.length; i++) {
+            answerList.children[i].children[0].textContent = i + ". " + answerCollection[Object.keys(answerCollection)[0]][i];
+            console.log(answerCollection[Object.keys(answerCollection)[0]]);
+        }
+    
+        document.addEventListener('click', function(next){
+            if(next.target.tagName=="BUTTON"){
+                displaySecondQuestions();
+                counter++;
+            }
+        })
     }
 }
 
-// function displaySecondQuestions () {
-//     question.textContent = questions[1];
-//     for (var i = 0; i < secondAnswers.length; i++) {
-//         answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
-//     }
-// }
+function displaySecondQuestions() {
+    console.log(counter);
+    if (counter === 1) {
+        question.textContent = questions[1];
+        for (var i = 0; i < answerCollection.secondAnswers.length; i++) {
+            answerList.children[i].children[0].textContent = i + ". " + answerCollection[Object.keys(answerCollection)[1]][i];
+            console.log(answerCollection[Object.keys(answerCollection)[0]][1]);
+        }
 
-// function displayThirdQuestions () {
-//     question.textContent = questions[2];
-//     for (var i = 0; i < secondAnswers.length; i++) {
-//         answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
-//     }
-// }
+        document.addEventListener('click', function(next){
+            if(next.target.tagName=="BUTTON"){
+                displayThirdQuestions();
+                counter++;
+            }
+        })
+    }
+}
 
-// function displayFourthQuestions () {
-//     question.textContent = questions[3];
-//     for (var i = 0; i < secondAnswers.length; i++) {
-//         answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
-//     }
-// }
+function displayThirdQuestions () {
+    question.textContent = questions[2];
+    for (var i = 0; i < secondAnswers.length; i++) {
+        answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
+    }
+}
 
-funcCollection.play();
-funcCollection.first();
+function displayFourthQuestions () {
+    question.textContent = questions[3];
+    for (var i = 0; i < secondAnswers.length; i++) {
+        answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
+    }
+}
+
+playTime();
+displayFirstQuestions();
