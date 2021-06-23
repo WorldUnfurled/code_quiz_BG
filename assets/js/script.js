@@ -135,13 +135,7 @@ function displayFourthQuestions() {
 
 function displayHighscores() {
     if (counter == 4) {
-        card.innerHTML = '';
-        console.log(card);
-        var nameInput = [];
-        // scoreButton.addEventListener('click', 
-        //     highScorers.push(nameInput);
-        //     highScores.push();
-        // )
+        window.location.replace("highscores.html");
     }
 }
 

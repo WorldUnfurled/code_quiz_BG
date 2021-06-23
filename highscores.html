@@ -13,21 +13,22 @@
 </head>
 <body>
     <nav id="navbar">
-        <div class="btn-foc" id="highscores">
-            <p><a href='./highscores.html'>View Highscores</a></p>
-        </div>
         <div class="btn-foc" id="countdown">
             <p>Time: <span id="time"></span></p>
         </div>
     </nav>
     <main id="card">
-        <header><h1 id="question">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</h1></header>
-        <ul id="answer-list">
-            <li><button class="btn"></button></li>
-            <li><button class="btn"></button></li>
-            <li><button class="btn"></button></li>
-            <li><button class="btn"></button></li>
-        </ul>
+        <header><h1 id="welcome">Welcome to the Highscore Page!</h1></header>
+        <section id="score-content">
+            <h3>Enter your name:</h3>
+            <input type="text" id="name" name="name">
+            <button type="submit">Submit</button> <br>
+            <button type='submit'>Go Back</button>
+            <button type='submit'>Clear Highscores</button>
+        </section>
+        <section id="score-list">
+            
+        </section>
     </main>
     <script src="./assets/js/script.js"></script>
 </body>

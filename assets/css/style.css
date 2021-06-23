@@ -5,6 +5,13 @@ body {
     font-family: 'Karla';
 }
 
+input {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 2px solid red;
+    width: 300px;
+}
+
 #card {
     position: absolute;
     top: 50%;
@@ -15,10 +22,18 @@ body {
 
 #highscores {
     background-color: hsl(248, 50%, 30%);
-    color: white;
     margin: 20px 0 0 30px;
     padding: 10px;
     border-radius: 20px;
+}
+
+#highscores a {
+    text-decoration: none;
+    color: white;
+}
+
+#highscores a:visited {
+    color: white;
 }
 
 #countdown {
