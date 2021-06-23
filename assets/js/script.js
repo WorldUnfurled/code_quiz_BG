@@ -41,6 +41,8 @@ var answerCollection = {
     ]
 };
 
+var highScores = [];
+
 function playTime() {
     // Sets interval in variable
     var timeInterval = setInterval(function() {
@@ -133,7 +135,8 @@ function displayFourthQuestions() {
 }
 
 function displayHighscores() {
-    
+    highScorers.push();
+    highScores.push();
 }
 
 playTime();
