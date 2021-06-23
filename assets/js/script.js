@@ -58,52 +58,82 @@ var counter = 0;
 
 function displayFirstQuestions() {
     console.log(counter);
+    document.addEventListener('click', function(next){
+        if(next.target.tagName=="BUTTON"){
+            displaySecondQuestions();
+        }
+    })
+
     if (counter === 0) {
         question.textContent = questions[0];
         for (var i = 0; i < answerCollection.firstAnswers.length; i++) {
             answerList.children[i].children[0].textContent = i + ". " + answerCollection[Object.keys(answerCollection)[0]][i];
-            console.log(answerCollection[Object.keys(answerCollection)[0]]);
+            console.log(answerCollection[Object.keys(answerCollection)[0]][i]);
         }
-    
-        document.addEventListener('click', function(next){
-            if(next.target.tagName=="BUTTON"){
-                displaySecondQuestions();
-                counter++;
-            }
-        })
     }
+
+    counter = 1;
 }
 
 function displaySecondQuestions() {
     console.log(counter);
+    document.addEventListener('click', function(next){
+        if(next.target.tagName=="BUTTON"){
+            displayThirdQuestions();
+        }
+    })
+
     if (counter === 1) {
         question.textContent = questions[1];
-        for (var i = 0; i < answerCollection.secondAnswers.length; i++) {
+        for (var i = 0; i < answerCollection.firstAnswers.length; i++) {
             answerList.children[i].children[0].textContent = i + ". " + answerCollection[Object.keys(answerCollection)[1]][i];
-            console.log(answerCollection[Object.keys(answerCollection)[0]][1]);
+            console.log(answerCollection[Object.keys(answerCollection)[1]][i]);
         }
-
-        document.addEventListener('click', function(next){
-            if(next.target.tagName=="BUTTON"){
-                displayThirdQuestions();
-                counter++;
-            }
-        })
     }
+
+    counter = 2;
 }
 
-function displayThirdQuestions () {
-    question.textContent = questions[2];
-    for (var i = 0; i < secondAnswers.length; i++) {
-        answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
+function displayThirdQuestions() {
+    console.log(counter);
+    document.addEventListener('click', function(next){
+        if(next.target.tagName=="BUTTON"){
+            displayFourthQuestions();
+        }
+    })
+
+    if (counter === 2) {
+        question.textContent = questions[2];
+        for (var i = 0; i < answerCollection.firstAnswers.length; i++) {
+            answerList.children[i].children[0].textContent = i + ". " + answerCollection[Object.keys(answerCollection)[2]][i];
+            console.log(answerCollection[Object.keys(answerCollection)[2]][i]);
+        }
     }
+
+    counter = 3;
 }
 
-function displayFourthQuestions () {
-    question.textContent = questions[3];
-    for (var i = 0; i < secondAnswers.length; i++) {
-        answerList.children[i].children[0].textContent = i + ". " + firstAnswers[i];
+function displayFourthQuestions() {
+    console.log(counter);
+    document.addEventListener('click', function(next){
+        if(next.target.tagName=="BUTTON"){
+            displayHighscores();
+        }
+    })
+
+    if (counter === 3) {
+        question.textContent = questions[3];
+        for (var i = 0; i < answerCollection.firstAnswers.length; i++) {
+            answerList.children[i].children[0].textContent = i + ". " + answerCollection[Object.keys(answerCollection)[3]][i];
+            console.log(answerCollection[Object.keys(answerCollection)[3]][i]);
+        }
     }
+
+    counter = 4;
+}
+
+function displayHighscores() {
+    
 }
 
 playTime();
