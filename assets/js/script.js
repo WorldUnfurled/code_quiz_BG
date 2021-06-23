@@ -1,7 +1,9 @@
 var time = document.querySelector('#time');
 var question = document.querySelector('#question');
 var answerList = document.querySelector('#answer-list');
+var card = document.querySelector('#card');
 
+var counter = 0;
 var timeLeft = 60;
 
 var questions = [
@@ -48,14 +50,12 @@ function playTime() {
       timeLeft--;
       time.textContent = timeLeft;
 
-      if (timeLeft == 0) {
+      if (timeLeft == 0 || counter == 4) {
           clearInterval(timeInterval);
       }
   
     }, 1000);
 }
-
-var counter = 0;
 
 function displayFirstQuestions() {
     console.log(counter);
@@ -135,11 +135,13 @@ function displayFourthQuestions() {
 
 function displayHighscores() {
     if (counter == 4) {
+        card.innerHTML = '';
+        console.log(card);
         var nameInput = [];
-        scoreButton.addEventListener('click', 
-            highScorers.push(nameInput);
-            highScores.push();
-        )
+        // scoreButton.addEventListener('click', 
+        //     highScorers.push(nameInput);
+        //     highScores.push();
+        // )
     }
 }
 
