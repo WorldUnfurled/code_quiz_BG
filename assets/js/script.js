@@ -44,7 +44,6 @@ var answerCollection = {
 var highScores = [];
 
 function playTime() {
-    // Sets interval in variable
     var timeInterval = setInterval(function() {
       timeLeft--;
       time.textContent = timeLeft;
@@ -135,8 +134,13 @@ function displayFourthQuestions() {
 }
 
 function displayHighscores() {
-    highScorers.push();
-    highScores.push();
+    if (counter == 4) {
+        var nameInput = [];
+        scoreButton.addEventListener('click', 
+            highScorers.push(nameInput);
+            highScores.push();
+        )
+    }
 }
 
 playTime();
