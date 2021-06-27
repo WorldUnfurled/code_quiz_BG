@@ -5,6 +5,7 @@ var card = document.querySelector('#card');
 
 var counter = 0;
 var timeLeft = 60;
+var score;
 
 var questions = [
     "What tag is used to link a Javascript file to the HTML?",
@@ -52,6 +53,7 @@ function playTime() {
 
       if (timeLeft == 0 || counter == 4) {
           clearInterval(timeInterval);
+          displayHighscores();
       }
   
     }, 1000);
@@ -134,9 +136,15 @@ function displayFourthQuestions() {
 }
 
 function displayHighscores() {
-    if (counter == 4) {
+    if (counter == 4 || timeLeft == 0) {
         window.location.replace("highscores.html");
+        score = timeLeft;
+        console.log(score);
     }
+
+    document.addEventListener('click', function() {
+
+    })
 }
 
 playTime();

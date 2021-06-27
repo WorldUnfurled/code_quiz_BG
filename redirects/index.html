@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
@@ -13,23 +13,22 @@
 </head>
 <body>
     <nav id="navbar">
+        <div class="btn-foc" id="highscores">
+            <p><a href='./highscores.html'>View Highscores</a></p>
+        </div>
         <div class="btn-foc" id="countdown">
             <p>Time: <span id="time"></span></p>
         </div>
     </nav>
     <main id="card">
-        <header><h1 id="welcome">Welcome to the Highscore Page!</h1></header>
-        <section id="score-content">
-            <h3>Enter your name:</h3>
-            <input type="text" id="name" name="name">
-            <button type="submit">Submit</button> <br>
-            <button type='submit'>Go Back</button>
-            <button type='submit'>Clear Highscores</button>
-        </section>
-        <section id="score-list">
-            
-        </section>
+        <header><h1 id="question"></h1></header>
+        <ul id="answer-list">
+            <li><button class="btn"></button></li>
+            <li><button class="btn"></button></li>
+            <li><button class="btn"></button></li>
+            <li><button class="btn"></button></li>
+        </ul>
     </main>
-    <script src="./assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

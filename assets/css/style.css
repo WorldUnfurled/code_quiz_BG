@@ -12,6 +12,11 @@ input {
     width: 300px;
 }
 
+#start-message {
+    padding: 10px 10px 10px 0;
+    line-height: 1.5em;
+}
+
 #card {
     position: absolute;
     top: 50%;
